@@ -5,7 +5,7 @@ class Solution {
     
     public int binarySearch(int[] nums, int left, int rigth, int target) {
         if(rigth >= left){
-            int mid = (rigth + left)/2;
+            int mid = left + (rigth - left)/2;
             if(nums[mid] == target) return mid;
             
             if(nums[mid] > target) return binarySearch(nums, left, mid -1, target);
